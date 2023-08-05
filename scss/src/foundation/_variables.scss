@@ -47,3 +47,47 @@ $red_light: #f8dedf;
 
 $blue: #0468db;
 $blue_light: #b4d2f4;
+
+/*=============================================
+=            Typography            =
+=============================================*/
+
+/**
+ *
+ * 1) The playfair font. We'll use this for headings mostly.
+ *     https://fonts.google.com/specimen/Playfair+Display
+ *
+ * 2) The raleway font. We'll use this for the body text.
+ *     https://fonts.google.com/specimen/Raleway
+ */
+
+/* Font Families */
+$playfair: 'Playfair', serif;
+$raleway: 'Raleway', 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
+
+/* Font Sizes */
+$fs_xs: 0.75rem; // 12px
+$fs_sm: 0.875rem; // 14px
+$fs_base: 1rem; // 16px
+$fs_lg: 1.125rem; //18px
+$fs_xl: 1.5rem; // 24px
+
+/* Heading Font Sizes */
+/*  Pay attention with the sames sizes 
+    because their diffences are in the 
+    font families shapes */
+$h_1: 1.375rem; // 22px
+$h_2: 1.375rem; // 18px
+$h_3: 1; // 22px
+$h_4: 1.125rem; // 18px
+$h_5: 0.75rem; // 12px
+$h_6: 0.75rem; // 12px
+
+/* Font Weights */
+$fw_light: 300;
+$fw_normal: 400;
+$fw_medium: 500;
+$fw_semibold: 600;
+$fw_bold: 700;
+$fw_extrabold: 800;
+$fw_black: 900;
