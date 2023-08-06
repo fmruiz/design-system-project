@@ -1,0 +1,27 @@
+{
+    "name": "ds.f",
+    "version": "1.0.0",
+    "description": "Design system using scss, react, and another stuff",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "husky install"
+    },
+    "keywords": [],
+    "author": "Franco M. Ruiz",
+    "license": "ISC",
+    "dependencies": {
+        "husky": "^8.0.3"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.6.7",
+        "@commitlint/config-conventional": "^17.6.7",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "husky": "^8.0.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
