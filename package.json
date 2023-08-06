@@ -4,7 +4,9 @@
     "description": "Design system using scss, react, and another stuff",
     "main": "index.js",
     "scripts": {
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "release": "standard-version --no-verify",
+        "commit": "git add . && cz"
     },
     "keywords": [],
     "author": "Franco M. Ruiz",
@@ -15,9 +17,11 @@
     "devDependencies": {
         "@commitlint/cli": "^17.6.7",
         "@commitlint/config-conventional": "^17.6.7",
+        "@commitlint/cz-commitlint": "^17.6.7",
         "commitizen": "^4.3.0",
         "cz-conventional-changelog": "^3.3.0",
-        "husky": "^8.0.0"
+        "husky": "^8.0.0",
+        "inquirer": "^9.2.10"
     },
     "config": {
         "commitizen": {
