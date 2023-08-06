@@ -1,0 +1,14 @@
+{
+    "name": "@ds.f/scss",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Franco M. Ruiz",
+    "license": "ISC",
+    "dependencies": {
+        "normalize-scss": "^7.0.1"
+    }
+}
