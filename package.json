@@ -1,19 +1,18 @@
 {
-    "name": "ds.f",
+    "name": "ds.f-core",
     "version": "1.0.0",
     "description": "Design system using scss, react, and another stuff",
     "main": "index.js",
     "scripts": {
         "prepare": "husky install",
         "release": "standard-version --no-verify",
-        "commit": "git add . && cz"
+        "commit": "git add . && cz",
+        "build": "yarn lerna run build"
     },
     "keywords": [],
     "author": "Franco M. Ruiz",
     "license": "ISC",
-    "dependencies": {
-        "husky": "^8.0.3"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@commitlint/cli": "^17.6.7",
         "@commitlint/config-conventional": "^17.6.7",
@@ -21,11 +20,21 @@
         "commitizen": "^4.3.0",
         "cz-conventional-changelog": "^3.3.0",
         "husky": "^8.0.0",
-        "inquirer": "^9.2.10"
+        "inquirer": "^9.2.10",
+        "lerna": "^7.1.4"
     },
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
         }
+    },
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "packages/*"
+        ],
+        "nohoist": [
+            "**/normalize-scss"
+        ]
     }
 }
