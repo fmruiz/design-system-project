@@ -2,6 +2,11 @@
     "compilerOptions": {
         "outDir": "lib",
         "module": "esnext",
+        "paths": {
+            "@ds.f/*": [
+                "../*"
+            ]
+        },
         "lib": [
             "DOM",
             "ESNext"

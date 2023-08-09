@@ -33,7 +33,8 @@
     "workspaces": {
         "packages": [
             "packages/*",
-            "playgrounds/*"
+            "playgrounds/*",
+            "foundation/*"
         ],
         "nohoist": [
             "**/normalize-scss"
