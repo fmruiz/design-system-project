@@ -97,11 +97,11 @@
 =            Head font weights                =
 =============================================*/
 .dsf-button__container {
-    display: flex;
-    background: var(--dsf-btn-primary-bg, #5ece7b);
-    color: var(--dsf-btn-primary-color, #ffffff);
-    border: none;
-    padding: 0.25rem;
+  display: flex;
+  background: var(--dsf-btn-primary-bg, #5ece7b);
+  color: var(--dsf-btn-primary-color, #ffffff);
+  border: none;
+  padding: 0.25rem;
 }
 
 

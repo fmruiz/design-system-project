@@ -28877,7 +28877,7 @@ const Button = ({
 }) => {
   return _react.default.createElement("button", {
     className: "dsf-button__container"
-  }, label, "asd");
+  }, label || 'Example Button');
 };
 exports.default = Button;
 },{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.f/react/dist/index.js":[function(require,module,exports) {
@@ -28987,7 +28987,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43915" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42495" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
