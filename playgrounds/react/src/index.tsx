@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Button } from '@ds.f/react';
+import { Color } from '@ds.f/react';
 import '@ds.f/scss/src/lib/Button.css';
 
-ReactDOM.render(<Button label="test" />, document.querySelector('#root'));
+ReactDOM.render(<Color hexCode="#000" />, document.querySelector('#root'));

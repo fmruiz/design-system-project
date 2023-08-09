@@ -28863,7 +28863,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"../../../node_modules/@ds.f/react/dist/atoms/Button/Button.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"../../../node_modules/@ds.f/react/dist/atoms/Color/Color.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28872,29 +28872,31 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-const Button = ({
-  label
+const Color = ({
+  hexCode
 }) => {
-  return _react.default.createElement("button", {
-    className: "dsf-button__container"
-  }, label || 'Example Button');
+  return _react.default.createElement("div", {
+    style: {
+      backgroundColor: hexCode
+    }
+  }, "Color");
 };
-exports.default = Button;
+exports.default = Color;
 },{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.f/react/dist/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Button", {
+Object.defineProperty(exports, "Color", {
   enumerable: true,
   get: function () {
-    return _Button.default;
+    return _Color.default;
   }
 });
-var _Button = _interopRequireDefault(require("./atoms/Button/Button.js"));
+var _Color = _interopRequireDefault(require("./atoms/Color/Color.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Button/Button.js":"../../../node_modules/@ds.f/react/dist/atoms/Button/Button.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Color/Color.js":"../../../node_modules/@ds.f/react/dist/atoms/Color/Color.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -28959,8 +28961,8 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 var _react2 = require("@ds.f/react");
 require("@ds.f/scss/src/lib/Button.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-_reactDom.default.render(_react.default.createElement(_react2.Button, {
-  label: "test"
+_reactDom.default.render(_react.default.createElement(_react2.Color, {
+  hexCode: "#000"
 }), document.querySelector('#root'));
 },{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","@ds.f/react":"../../../node_modules/@ds.f/react/dist/index.js","@ds.f/scss/src/lib/Button.css":"../../../node_modules/@ds.f/scss/src/lib/Button.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -28987,7 +28989,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42495" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41097" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
