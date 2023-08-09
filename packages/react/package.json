@@ -1,12 +1,13 @@
 {
     "name": "@ds.f/react",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "dist/index.js",
     "license": "MIT",
     "scripts": {
         "build": "rollup -c --bundleConfigAsCjs"
     },
     "devDependencies": {
+        "@types/prop-types": "^15.7.5",
         "@types/react": "^18.2.18",
         "react": "^18.2.0",
         "rollup": "^3.27.2",

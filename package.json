@@ -1,5 +1,5 @@
 {
-    "name": "ds.f-core",
+    "name": "@ds.f/core",
     "version": "1.0.0",
     "description": "Design system using scss, react, and another stuff",
     "main": "index.js",
@@ -31,7 +31,8 @@
     "private": true,
     "workspaces": {
         "packages": [
-            "packages/*"
+            "packages/*",
+            "playgrounds/*"
         ],
         "nohoist": [
             "**/normalize-scss"

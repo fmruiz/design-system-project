@@ -7,7 +7,7 @@ interface ButtonProps {
 const Button: React.FunctionComponent<ButtonProps> = ({
     label,
 }: ButtonProps) => {
-    return <button>{label}</button>;
+    return <button className="dsf-button__container">{label}</button>;
 };
 
 export default Button;

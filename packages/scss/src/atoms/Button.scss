@@ -1,3 +1,9 @@
+@import 'foundation/all';
+
 .dsf-button__container {
     display: flex;
+    background: $btn_primary_bg;
+    color: $btn_primary_color;
+    border: none;
+    padding: map-get($spacing, 'xxxs');
 }

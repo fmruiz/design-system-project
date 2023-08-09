@@ -10,6 +10,7 @@ export default {
     plugins: [ts()],
     output: {
         preserveModules: true,
+        dir: 'dist',
     },
     external: ['react'],
 };
