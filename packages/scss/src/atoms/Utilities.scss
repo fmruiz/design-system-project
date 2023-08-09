@@ -1,0 +1,11 @@
+@import 'foundation/all';
+
+@each $size, $value in $spacing {
+    .dsf-width-#{$size} {
+        width: $value;
+    }
+
+    .dsf-height-#{$size} {
+        width: $value;
+    }
+}
