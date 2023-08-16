@@ -1,0 +1,56 @@
+@import 'foundation/all';
+
+.dsf-select {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include padding('xs');
+        border: 1px solid $form_border_color;
+        background: $form_bg_color;
+
+        font-family: $body_font_family;
+        cursor: pointer;
+    }
+
+    &__overlay {
+        @include padding('none');
+        @include margin('none');
+
+        border: 1px solid $form_border_color;
+        background-color: $form_bg_color;
+        z-index: 99;
+
+        list-style-type: none;
+
+        box-shadow: map-get($shadows, 'base');
+
+        position: absolute;
+
+        width: 100%;
+    }
+
+    &__option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        cursor: pointer;
+        @include padding('xs');
+    }
+
+    &__option:hover {
+        background-color: $form_bg_color_hover;
+    }
+
+    &__option--selected {
+        background-color: $form_bg_option_selected;
+        color: $form_color_option_selected;
+    }
+}

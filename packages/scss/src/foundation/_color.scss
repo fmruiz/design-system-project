@@ -24,6 +24,14 @@ $btn_primary_bg_hover: var(--dsf-btn-primary-bg-hover, $green_light) !default;
 /*=============================================
 =             Forms Colors          =
 =============================================*/
+$form_border_color: var(--dsf-form-border-color, $white_dark) !default;
+$form_bg_color: var(--dsf-form-bg-color, $white) !default;
+$form_bg_color_hover: var(--dsf-form-bg-color-hover, $white_dark) !default;
+$form_bg_option_selected: var(--dsf-form-bg-option-selected, $green) !default;
+$form_color_option_selected: var(
+    --dsf-form-color-option-selected,
+    $white
+) !default;
 $form_color: var(--dsf-form-color, $dark) !default;
 $form_bg: var(--dsf-form-bg, $white) !default;
 $form_error_color: var(--dsf-form-error-color, $red) !default;

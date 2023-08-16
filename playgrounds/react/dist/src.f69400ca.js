@@ -29019,33 +29019,56 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
+var _Text = _interopRequireDefault(require("../../atoms/Text/Text.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const Select = ({
   options = [],
   label = 'Please select an option',
   onOptionSelected
 }) => {
+  const labelRef = _react.default.useRef(null);
   const [isOpen, setIsOpen] = _react.default.useState(false);
+  const [selectedIndex, setSelectedIndex] = _react.default.useState(null);
+  const [overlayTop, setOverlayTop] = _react.default.useState(undefined);
   const onOptionClicked = (option, optionIdx) => {
-    setIsOpen(!isOpen);
     if (onOptionSelected) {
       onOptionSelected(option, optionIdx);
     }
+    setSelectedIndex(optionIdx);
+    setIsOpen(false);
   };
   const onLabelClick = () => {
     setIsOpen(!isOpen);
   };
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("button", {
-    onClick: () => onLabelClick()
-  }, label), isOpen && _react.default.createElement("ul", null, options.map((option, index) => {
+  _react.default.useEffect(() => {
+    setOverlayTop((labelRef.current?.offsetHeight || 0) + 10);
+  }, [labelRef.current?.offsetHeight]);
+  let selectedOption = null;
+  if (selectedIndex !== null) {
+    selectedOption = options[selectedIndex];
+  }
+  return _react.default.createElement("div", {
+    className: "dsf-select"
+  }, _react.default.createElement("button", {
+    className: "dsf-select__label",
+    onClick: () => onLabelClick(),
+    ref: labelRef
+  }, _react.default.createElement(_Text.default, null, selectedOption === null ? label : selectedOption.label)), isOpen && _react.default.createElement("ul", {
+    style: {
+      top: overlayTop
+    },
+    className: "dsf-select__overlay"
+  }, options.map((option, index) => {
+    const isSelected = selectedIndex === index;
     return _react.default.createElement("li", {
       onClick: () => onOptionClicked(option, index),
-      key: option.value
-    }, option.label);
+      key: option.value,
+      className: `dsf-select__option ${isSelected ? 'dsf-select__option--selected' : ''}`
+    }, _react.default.createElement(_Text.default, null, option.label));
   })));
 };
 exports.default = Select;
-},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.f/react/dist/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","../../atoms/Text/Text.js":"../../../node_modules/@ds.f/react/dist/atoms/Text/Text.js"}],"../../../node_modules/@ds.f/react/dist/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29143,6 +29166,12 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds.f/scss/src/lib/Select.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
 },{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -29151,18 +29180,19 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 var _react2 = require("@ds.f/react");
 require("@ds.f/scss/src/lib/Margin.css");
 require("@ds.f/scss/src/lib/Text.css");
+require("@ds.f/scss/src/lib/Select.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var options = [{
   label: 'Strict Black',
   value: 'strict-black'
 }, {
-  label: 'Strict Black',
-  value: 'strict-black'
+  label: 'Strict green',
+  value: 'strict-green'
 }];
 _reactDom.default.render(_react.default.createElement(_react2.Select, {
   options: options
 }), document.querySelector('#root'));
-},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","@ds.f/react":"../../../node_modules/@ds.f/react/dist/index.js","@ds.f/scss/src/lib/Margin.css":"../../../node_modules/@ds.f/scss/src/lib/Margin.css","@ds.f/scss/src/lib/Text.css":"../../../node_modules/@ds.f/scss/src/lib/Text.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","@ds.f/react":"../../../node_modules/@ds.f/react/dist/index.js","@ds.f/scss/src/lib/Margin.css":"../../../node_modules/@ds.f/scss/src/lib/Margin.css","@ds.f/scss/src/lib/Text.css":"../../../node_modules/@ds.f/scss/src/lib/Text.css","@ds.f/scss/src/lib/Select.css":"../../../node_modules/@ds.f/scss/src/lib/Select.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29187,7 +29217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41297" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43451" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
