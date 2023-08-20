@@ -51,7 +51,7 @@ const Select: React.FC<SelectProps> = ({
     }
 
     return (
-        <div className="dsf-select">
+        <div className="dsf-select" data-testid="select-react">
             <button
                 aria-haspopup={true}
                 aria-expanded={isOpen ? true : undefined}
@@ -59,6 +59,7 @@ const Select: React.FC<SelectProps> = ({
                 className="dsf-select__label"
                 onClick={() => onLabelClick()}
                 ref={labelRef}
+                data-testid="dsfSelectButton"
             >
                 <Text>
                     {selectedOption === null ? label : selectedOption.label}
@@ -71,6 +72,7 @@ const Select: React.FC<SelectProps> = ({
                     role="menu"
                     style={{ top: overlayTop }}
                     className="dsf-select__overlay"
+                    data-testid="dsfSelectList"
                 >
                     {options.map((option, index) => {
                         const isSelected = selectedIndex === index;
