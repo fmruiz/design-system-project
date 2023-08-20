@@ -24,9 +24,9 @@ const Select = ({ options = [], label = 'Please select an option', onOptionSelec
         selectedOption = options[selectedIndex];
     }
     return (React.createElement("div", { className: "dsf-select" },
-        React.createElement("button", { className: "dsf-select__label", onClick: () => onLabelClick(), ref: labelRef },
+        React.createElement("button", { "aria-haspopup": true, "aria-expanded": isOpen ? true : undefined, "aria-controls": "dsf-select-list", className: "dsf-select__label", onClick: () => onLabelClick(), ref: labelRef },
             React.createElement(Text, null, selectedOption === null ? label : selectedOption.label)),
-        isOpen && (React.createElement("ul", { style: { top: overlayTop }, className: "dsf-select__overlay" }, options.map((option, index) => {
+        isOpen && (React.createElement("ul", { id: "dsf-select-list", role: "menu", style: { top: overlayTop }, className: "dsf-select__overlay" }, options.map((option, index) => {
             const isSelected = selectedIndex === index;
             return (React.createElement("li", { onClick: () => onOptionClicked(option, index), key: option.value, className: `dsf-select__option ${isSelected
                     ? 'dsf-select__option--selected'

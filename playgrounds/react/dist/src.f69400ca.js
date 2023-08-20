@@ -29050,10 +29050,15 @@ const Select = ({
   return _react.default.createElement("div", {
     className: "dsf-select"
   }, _react.default.createElement("button", {
+    "aria-haspopup": true,
+    "aria-expanded": isOpen ? true : undefined,
+    "aria-controls": "dsf-select-list",
     className: "dsf-select__label",
     onClick: () => onLabelClick(),
     ref: labelRef
   }, _react.default.createElement(_Text.default, null, selectedOption === null ? label : selectedOption.label)), isOpen && _react.default.createElement("ul", {
+    id: "dsf-select-list",
+    role: "menu",
     style: {
       top: overlayTop
     },
@@ -29217,7 +29222,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43451" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39783" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
