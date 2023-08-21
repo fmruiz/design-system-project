@@ -15,7 +15,11 @@ const Color: React.FC<ColorProps> = ({
     const className = `dsf-width-${width} dsf-height-${height}`;
 
     return (
-        <div style={{ backgroundColor: hexCode }} className={className}></div>
+        <div
+            style={{ backgroundColor: hexCode }}
+            className={className}
+            data-testid={`dsfColorContainer`}
+        ></div>
     );
 };
 
