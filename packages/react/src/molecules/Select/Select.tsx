@@ -86,6 +86,7 @@ const Select: React.FC<SelectProps> = ({
                                         ? 'dsf-select__option--selected'
                                         : ''
                                 }`}
+                                data-testid={`dsfSelectItem-${index}`}
                             >
                                 <Text>{option.label}</Text>
                             </li>

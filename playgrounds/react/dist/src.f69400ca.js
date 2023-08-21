@@ -29048,27 +29048,31 @@ const Select = ({
     selectedOption = options[selectedIndex];
   }
   return _react.default.createElement("div", {
-    className: "dsf-select"
+    className: "dsf-select",
+    "data-testid": "select-react"
   }, _react.default.createElement("button", {
     "aria-haspopup": true,
     "aria-expanded": isOpen ? true : undefined,
     "aria-controls": "dsf-select-list",
     className: "dsf-select__label",
     onClick: () => onLabelClick(),
-    ref: labelRef
+    ref: labelRef,
+    "data-testid": "dsfSelectButton"
   }, _react.default.createElement(_Text.default, null, selectedOption === null ? label : selectedOption.label)), isOpen && _react.default.createElement("ul", {
     id: "dsf-select-list",
     role: "menu",
     style: {
       top: overlayTop
     },
-    className: "dsf-select__overlay"
+    className: "dsf-select__overlay",
+    "data-testid": "dsfSelectList"
   }, options.map((option, index) => {
     const isSelected = selectedIndex === index;
     return _react.default.createElement("li", {
       onClick: () => onOptionClicked(option, index),
       key: option.value,
-      className: `dsf-select__option ${isSelected ? 'dsf-select__option--selected' : ''}`
+      className: `dsf-select__option ${isSelected ? 'dsf-select__option--selected' : ''}`,
+      "data-testid": `dsfSelectItem-${index}`
     }, _react.default.createElement(_Text.default, null, option.label));
   })));
 };
@@ -29222,7 +29226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39783" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34333" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

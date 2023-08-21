@@ -20,10 +20,16 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "declaration": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "types": [
+            "jest",
+            "node",
+            "@testing-library/jest-dom"
+        ]
     },
     "include": [
-        "src"
+        "src",
+        "jest-setup.ts"
     ],
     "exclude": [
         "node_modules",
