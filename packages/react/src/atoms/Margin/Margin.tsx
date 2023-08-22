@@ -40,7 +40,11 @@ const Margin: React.FC<MarginProps> = ({
         className = `${className} dsf-margin-bottom-${space}`;
     }
 
-    return <div className={className}>{children}</div>;
+    return (
+        <div className={className} data-testid="dsfMargin">
+            {children}
+        </div>
+    );
 };
 
 export default Margin;
