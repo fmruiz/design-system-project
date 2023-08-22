@@ -9,7 +9,11 @@ interface TextProps {
 const Text: React.FC<TextProps> = ({ size = 'base', children }: TextProps) => {
     const className = `dsf-text-${size}`;
 
-    return <p className={className}>{children}</p>;
+    return (
+        <p className={className} data-testid="dsfText">
+            {children}
+        </p>
+    );
 };
 
 export default Text;
